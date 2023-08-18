@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI;
-const DB_NAME = 'REPLACE_ME_WITH_YOUR_DB_NAME';
+const DB_NAME = netlify;
 
 let cachedDb = null;
 
