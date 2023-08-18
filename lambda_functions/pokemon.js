@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI;
-const DB_NAME = netlify;
+
 
 let cachedDb = null;
 
@@ -12,7 +12,7 @@ const connectToDatabase = async (uri) => {
   });
 
   
-  cachedDb = client.db(DB_NAME);
+  cachedDb = client.db("netlify");
 
   return cachedDb;
 };
