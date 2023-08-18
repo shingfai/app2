@@ -1,5 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = process.env.MONGODB_URI;
+const DB_NAME = 'REPLACE_ME_WITH_YOUR_DB_NAME';
 
 let cachedDb = null;
 
@@ -10,7 +11,8 @@ const connectToDatabase = async (uri) => {
     useUnifiedTopology: true,
   });
 
-  cachedDb = client.db("test");
+  
+  cachedDb = client.db(DB_NAME);
 
   return cachedDb;
 };
